@@ -202,15 +202,13 @@
                         }
                     }
 
-
-
                     if (isset($_POST['mes'])) {
 
                         $array_aniversarios = [];
 
                         $mes = substr($_POST['mes'], 5);
                         $ano = substr($_POST['mes'], 0, 4);
-                        $array_aniversarios = explode(', ', $_POST['array_aniversarios']);
+                        $array_aniversarios = explode(',', $_POST['array_aniversarios']);
                         sort($array_aniversarios);
 
                         geraCalendario($mes, $ano, $array_aniversarios);
